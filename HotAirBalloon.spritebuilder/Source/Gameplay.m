@@ -12,6 +12,11 @@ static const CGFloat flySpeed = 150.f;
 
 @implementation Gameplay {
     CCSprite *_balloon;
+    CCPhysicsNode *_physicsNode;
+}
+
+- (void)update:(CCTime)delta {
+    _physicsNode.position = ccp(_balloon.position.x, _balloon.position.y);
 }
 
 - (void)didLoadFromCCB {
